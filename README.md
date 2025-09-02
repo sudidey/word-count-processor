@@ -27,16 +27,27 @@ It demonstrates how to process a text file and apply the following business rule
 ## 📂 Project Structure
 src
 ├── main
-│ └── java/com/example/wordprocessor
-│ ├── WordProcessorApplication.java # Spring Boot entry point
-│ ├── service
-│ │ └── WordProcessorService.java # Core word processing logic
-│ └── util
-│ └── FileUtil.java # File reading helper
+│   ├── java/com/wordProcessorApplication/demo
+│   │   ├── WordProcessorApplication.java      # Spring Boot entry point
+│   │   ├── service
+│   │   │   └── WordProcessorService.java      # Core word processing logic
+│   │   ├── util
+│   │   │   └── FileUtil.java                  # File reading helper
+│   │   ├── config
+│   │   │   └── ApplicationProperties.java     # Centralized application properties binding
+│   │   ├── exception
+│   │   │   └── FileProcessingException.java   # Custom exception for file errors
+│   │   └── rule
+│   │       ├── WordsRule.java                 # Common rule interface
+│   │       ├── StartsWithRule.java            # Rule: words starting with specific letter
+│   │       └── LongWordRule.java              # Rule: long word detection
+│   │
+│   └── resources
+│       └── application.properties             # Spring Boot application configuration
+│
 └── test
-└── java/com/example/wordprocessor
-├── WordProcessorServiceTest.java # Unit tests
-└── WordProcessorIntegrationTest.java # Spring Boot integration test
+    └── java/com/example/wordprocessor
+        ├── WordProcessorServiceTest.java      # Unit tests
 
 
 ## ⚙️ Configuration
