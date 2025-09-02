@@ -50,6 +50,34 @@ src
         ├── WordProcessorServiceTest.java      # Unit tests
 
 
+## 📦 Dependencies
+
+The project uses the following Maven dependencies:
+
+<dependencies>
+    <!-- Spring Boot Starter (Core Framework) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <!-- Spring Boot Test (JUnit 5, Mockito, Spring Context for integration tests) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- AssertJ (Fluent assertions for testing) -->
+    <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>3.26.3</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
 ## ⚙️ Configuration
 Set the input file in `src/main/resources/application.properties`:
 
